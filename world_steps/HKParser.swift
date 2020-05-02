@@ -62,12 +62,12 @@ func getStepsWeek(completion: @escaping (Double) -> Void)
     let type = HKQuantityType.quantityType(forIdentifier: .stepCount)!
     let now = Date()
     var interval = DateComponents()
-    interval.day = 7
+    interval.day = 1
     var dateComponents = DateComponents()
-    dateComponents.setValue(-7, for: .day);
+    dateComponents.setValue(-1, for: .day);
     let startOfCount = Calendar.current.date(byAdding: dateComponents, to: now)
     let startOfStart = Calendar.current.startOfDay(for: startOfCount!)
-    print("date to start: \(startOfStart)")
+    print("date to start: \(startOfCount!)")
     print("now \(now)")
 
     let query = HKStatisticsCollectionQuery(quantityType: type,
@@ -77,7 +77,7 @@ func getStepsWeek(completion: @escaping (Double) -> Void)
                                             intervalComponents: interval)
     query.initialResultsHandler = { _, result, error in
         var resultCount = 0.0
-        result?.enumerateStatistics(from: startOfStart, to: now) { statistics, _ in
+        result?.enumerateStatistics(from: startOfStart!, to: now) { statistics, _ in
             
             if let sum = statistics.sumQuantity() {
                 // Get steps (they are of double type)

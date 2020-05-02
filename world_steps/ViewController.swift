@@ -24,7 +24,7 @@ class ViewController: UIViewController {
             DispatchQueue.main.async {
                 let stepCount = String(Int(result))
                 self.stepsLabel.text = String(stepCount)
-                print("steps: \(stepCount)");
+                print("steps month: \(stepCount)");
                 
             }
         }
