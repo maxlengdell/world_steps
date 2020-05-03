@@ -14,10 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var stepsLabelWeek: UILabel!
     @IBOutlet weak var stepsLabelDay: UILabel!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        //Access Step Count
-        authorize()
+    fileprivate func extractedFunc() {
         // Authorization Successful
         
         getStepsMonth { (result) in
@@ -28,6 +25,13 @@ class ViewController: UIViewController {
                 
             }
         }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        //Access Step Count
+        authorize()
+        extractedFunc()
         getStepsWeek { (result) in
             DispatchQueue.main.async {
                 let stepCount1 = String(Int(result))

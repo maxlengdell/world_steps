@@ -17,6 +17,8 @@
 		50A8FAEB245C2CB1008C2080 /* world_stepsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A8FAEA245C2CB1008C2080 /* world_stepsUITests.swift */; };
 		50A8FAFB245C2D23008C2080 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50A8FAFA245C2D23008C2080 /* HealthKit.framework */; };
 		50DC41F5245DFD1600708503 /* HKParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DC41F4245DFD1600708503 /* HKParser.swift */; };
+		50DC41F9245EFC0200708503 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DC41F8245EFC0200708503 /* SettingsViewController.swift */; };
+		50DC421F245F025600708503 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 50DC421D245F025600708503 /* Model.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		50A8FAF8245C2D23008C2080 /* world_steps.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = world_steps.entitlements; sourceTree = "<group>"; };
 		50A8FAFA245C2D23008C2080 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		50DC41F4245DFD1600708503 /* HKParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKParser.swift; sourceTree = "<group>"; };
+		50DC41F8245EFC0200708503 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		50DC421E245F025600708503 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,11 +114,13 @@
 				50A8FAC8245C2CB0008C2080 /* AppDelegate.swift */,
 				50A8FACA245C2CB0008C2080 /* SceneDelegate.swift */,
 				50A8FACC245C2CB0008C2080 /* ViewController.swift */,
-				50A8FACE245C2CB0008C2080 /* Main.storyboard */,
+				50DC41F8245EFC0200708503 /* SettingsViewController.swift */,
 				50DC41F4245DFD1600708503 /* HKParser.swift */,
+				50A8FACE245C2CB0008C2080 /* Main.storyboard */,
 				50A8FAD1245C2CB0008C2080 /* Assets.xcassets */,
 				50A8FAD3245C2CB0008C2080 /* LaunchScreen.storyboard */,
 				50A8FAD6245C2CB0008C2080 /* Info.plist */,
+				50DC421D245F025600708503 /* Model.xcdatamodeld */,
 			);
 			path = world_steps;
 			sourceTree = "<group>";
@@ -280,6 +286,8 @@
 				50DC41F5245DFD1600708503 /* HKParser.swift in Sources */,
 				50A8FAC9245C2CB0008C2080 /* AppDelegate.swift in Sources */,
 				50A8FACB245C2CB0008C2080 /* SceneDelegate.swift in Sources */,
+				50DC41F9245EFC0200708503 /* SettingsViewController.swift in Sources */,
+				50DC421F245F025600708503 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -610,6 +618,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		50DC421D245F025600708503 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				50DC421E245F025600708503 /* Model.xcdatamodel */,
+			);
+			currentVersion = 50DC421E245F025600708503 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 50A8FABD245C2CB0008C2080 /* Project object */;
 }

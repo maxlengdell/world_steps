@@ -20,7 +20,6 @@ func getStepsMonth(completion: @escaping (Double) -> Void)
     dateComponents.setValue(-30, for: .day);
     let startOfCount = Calendar.current.date(byAdding: dateComponents, to: now)
     let startOfStart = Calendar.current.startOfDay(for: startOfCount!)
-    print("date to start: \(startOfStart)")
 
     let query = HKStatisticsCollectionQuery(quantityType: type,
                                             quantitySamplePredicate: nil,
@@ -55,7 +54,6 @@ func getStepsMonth(completion: @escaping (Double) -> Void)
         } // end if
     }
     healthStore.execute(query)
-    print("executed month")
 }
 func getStepsWeek(completion: @escaping (Double) -> Void)
 {
@@ -67,8 +65,6 @@ func getStepsWeek(completion: @escaping (Double) -> Void)
     dateComponents.setValue(-7, for: .day);
     let startOfCount = Calendar.current.date(byAdding: dateComponents, to: now)
     let startOfStart = Calendar.current.startOfDay(for: startOfCount!)
-    print("date to start: week: \(startOfCount!)")
-    print("now \(now)")
 
     let query = HKStatisticsCollectionQuery(quantityType: type,
                                             quantitySamplePredicate: nil,
@@ -103,7 +99,6 @@ func getStepsWeek(completion: @escaping (Double) -> Void)
         } // end if
     }
     healthStore.execute(query)
-    print("executed week")
 }
 func getStepsDay(completion: @escaping (Double) -> Void)
 {
@@ -146,7 +141,6 @@ func getStepsDay(completion: @escaping (Double) -> Void)
         } // end if
     }
     healthStore.execute(query)
-    print("executed day")
 }
 func authorize(){
     let writableTypes: Set<HKSampleType> =
