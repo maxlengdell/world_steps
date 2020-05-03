@@ -58,8 +58,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xqb-SI-FQm">
-                                <rect key="frame" x="301" y="125" width="53" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xqb-SI-FQm">
+                                <rect key="frame" x="181" y="305" width="53" height="30"/>
                                 <state key="normal" title="Refresh"/>
                                 <connections>
                                     <action selector="update:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oej-kr-NJv"/>
@@ -68,7 +68,8 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Xqb-SI-FQm" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="caW-UI-HSO"/>
+                            <constraint firstItem="Xqb-SI-FQm" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="fuL-Ki-9Yc"/>
+                            <constraint firstItem="Xqb-SI-FQm" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="kRM-NI-oa6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

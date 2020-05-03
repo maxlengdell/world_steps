@@ -15,7 +15,7 @@ func getStepsMonth(completion: @escaping (Double) -> Void)
     let type = HKQuantityType.quantityType(forIdentifier: .stepCount)!
     let now = Date()
     var interval = DateComponents()
-    interval.day = 30
+    interval.day = 31
     var dateComponents = DateComponents()
     dateComponents.setValue(-30, for: .day);
     let startOfCount = Calendar.current.date(byAdding: dateComponents, to: now)
@@ -62,12 +62,12 @@ func getStepsWeek(completion: @escaping (Double) -> Void)
     let type = HKQuantityType.quantityType(forIdentifier: .stepCount)!
     let now = Date()
     var interval = DateComponents()
-    interval.day = 1
+    interval.day = 8
     var dateComponents = DateComponents()
-    dateComponents.setValue(-1, for: .day);
+    dateComponents.setValue(-7, for: .day);
     let startOfCount = Calendar.current.date(byAdding: dateComponents, to: now)
     let startOfStart = Calendar.current.startOfDay(for: startOfCount!)
-    print("date to start: \(startOfCount!)")
+    print("date to start: week: \(startOfCount!)")
     print("now \(now)")
 
     let query = HKStatisticsCollectionQuery(quantityType: type,
@@ -77,7 +77,7 @@ func getStepsWeek(completion: @escaping (Double) -> Void)
                                             intervalComponents: interval)
     query.initialResultsHandler = { _, result, error in
         var resultCount = 0.0
-        result?.enumerateStatistics(from: startOfStart!, to: now) { statistics, _ in
+        result?.enumerateStatistics(from: startOfStart, to: now) { statistics, _ in
             
             if let sum = statistics.sumQuantity() {
                 // Get steps (they are of double type)
@@ -112,11 +112,6 @@ func getStepsDay(completion: @escaping (Double) -> Void)
     var interval = DateComponents()
     interval.day = 1
     let startOfStart = Calendar.current.startOfDay(for: now)
-//    var dateComponents = DateComponents()
-//    dateComponents.setValue(-1, for: .day);
-//    let startOfCount = Calendar.current.date(byAdding: dateComponents, to: now)
-//    let startOfStart = Calendar.current.startOfDay(for: startOfCount!)
-//    print("date to start: \(startOfStart)")
     
     let query = HKStatisticsCollectionQuery(quantityType: type,
                                             quantitySamplePredicate: nil,

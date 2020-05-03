@@ -49,11 +49,27 @@ class ViewController: UIViewController {
     @IBAction func update(_ sender: Any) {
         print("test")
         
+        getStepsMonth { (result) in
+            DispatchQueue.main.async {
+                let stepCount = String(Int(result))
+                self.stepsLabel.text = String(stepCount)
+                print("steps month: \(stepCount)");
+                
+            }
+        }
+        getStepsWeek { (result) in
+            DispatchQueue.main.async {
+                let stepCount1 = String(Int(result))
+                self.stepsLabelWeek.text = String(stepCount1)
+                print("steps week: \(stepCount1)");
+                
+            }
+        }
         getStepsDay { (result) in
             DispatchQueue.main.async {
                 let stepCount = String(Int(result))
                 self.stepsLabelDay.text = String(stepCount)
-                print("stepsDay: \(stepCount)");
+                print("steps a Day: \(stepCount)");
                 
             }
         }
