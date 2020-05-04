@@ -115,13 +115,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="_______" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jol-ay-jeT">
-                                <rect key="frame" x="59" y="232" width="51" height="21"/>
+                                <rect key="frame" x="151" y="183" width="105" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="90" minimumValue="10" maximumValue="150" translatesAutoresizingMaskIntoConstraints="NO" id="Nvm-S8-ld4">
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="100" minimumValue="50" maximumValue="150" translatesAutoresizingMaskIntoConstraints="NO" id="Nvm-S8-ld4">
                                 <rect key="frame" x="273" y="172" width="94" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
@@ -136,16 +136,6 @@
                                     <segue destination="BYZ-38-t0r" kind="showDetail" id="MAu-Rg-jnq"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="text" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IlE-8u-KKb">
-                                <rect key="frame" x="150" y="171" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IdB-EU-Xmr">
-                                <rect key="frame" x="0.0" y="372" width="414" height="216"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JGH-TF-KL1">
                                 <rect key="frame" x="273" y="239" width="49" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -154,34 +144,27 @@
                                     <action selector="uploadAction:" destination="xib-ag-UqE" eventType="touchUpInside" id="F3D-b6-aZ2"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PVw-K1-rgZ">
+                                <rect key="frame" x="244" y="335" width="106" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Read Core data"/>
+                                <connections>
+                                    <action selector="readAllData:" destination="xib-ag-UqE" eventType="touchUpInside" id="Euy-59-rdc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="i6U-fZ-MP4"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="7PC-Ya-BHq"/>
                     <connections>
+                        <outlet property="stepper" destination="Nvm-S8-ld4" id="s5d-Wg-Qzv"/>
                         <outlet property="strideLength" destination="jol-ay-jeT" id="q7T-FZ-VOW"/>
-                        <outlet property="textInput" destination="IlE-8u-KKb" id="j2s-fZ-PaU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4na-2f-DKN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="936" y="43"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="vYM-0T-RNL">
-            <objects>
-                <viewController id="IXe-fk-P2B" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="pFP-fr-Gxo">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="e8z-0z-7G2"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Rp1-VT-RJe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1691" y="72"/>
+            <point key="canvasLocation" x="934.78260869565224" y="42.857142857142854"/>
         </scene>
     </scenes>
 </document>
